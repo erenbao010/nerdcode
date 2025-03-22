@@ -1,9 +1,12 @@
 package com.example.CTGTDL;
 
+import com.example.CTGTDL.chapter7.Dragon;
+import com.example.CTGTDL.generics.Printer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 @SpringBootApplication
 public class CtgtdlApplication {
@@ -13,7 +16,15 @@ public class CtgtdlApplication {
         System.out.println(a);
         a.method3();
         System.out.println(a.getName());
-
+        // example to use generics in java
+        Printer<Dragon> printer = new Printer<>(new Dragon());
+        printer.print("Dragon");
+        ArrayList<Dragon> dragons = new ArrayList<>();
+        dragons.add(new Dragon());
+        Dragon dragon = dragons.get(0);
+        System.out.println(dragons.size());
+        Printer<Double> doublePrinter = new Printer<>(22.2);
+        doublePrinter.print("Generics");
 //        Comparison comparison = new Comparison();
 //        System.out.println(comparison.compareString());
 //        int n = 10000;

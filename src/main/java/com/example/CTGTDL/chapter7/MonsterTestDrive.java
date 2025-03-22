@@ -28,28 +28,8 @@ abstract class Devil {
     }
 
 }
-    class Monster {
-        boolean frighten(int x) {
-            System.out.println("arrrgh");
-            return false;
-        }
-        boolean fly(int x) {
-            System.out.println("FLY monster");
-            return false;
-        }
-    }
-    class Dragon extends Monster {
-        boolean frighten(int degree) {
-            System.out.println("breath fire");
-            return true;
-        }
 
-        @Override
-        boolean fly(int x) {
-            System.out.println("dragon flies");
-            return true;
-        }
-    }
+
     class Vampire extends Monster implements Evil {
         boolean scare(int x) {
             System.out.println("a bite?");
