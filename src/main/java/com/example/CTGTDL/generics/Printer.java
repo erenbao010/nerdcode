@@ -11,6 +11,7 @@ public class Printer <T >{
         this.printThings = printThings;
     }
     public void print(String action) {
-        System.out.println(printThings+ action);
+        System.out.println(
+                action);
     }
 }
